@@ -1,6 +1,7 @@
 <div class="task" [ngClass]="{ reminder: taskPassed.reminder }" (dblclick)="updateReminder(taskPassed)">
   <p>{{taskPassed.text}}</p>
   <p>{{taskPassed.day}}</p>
+  <p><fa-icon [icon]="faEdit" (click)="editTask(taskPassed)"></fa-icon></p>
   <p><fa-icon [icon]="faTimes" (click)="deleteTask(taskPassed)"></fa-icon></p>
 </div>
 

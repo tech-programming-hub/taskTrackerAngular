@@ -1,0 +1,18 @@
+<form #taskEditForm="ngForm" (ngSubmit)="onEditTask(taskEditForm.value)" *ngIf="showEditTask">
+  <div [ngStyle]="{'display': 'none'}">
+    <input name="id" id="id" type="text" [(ngModel)]="id" />
+  </div>
+  <div>
+    <label>Task Edit Please</label>
+    <input name="text" id="text" type="text" placeholder="Add Task" [(ngModel)]="text" />
+  </div>
+  <div>
+    <label>Day & Time</label>
+    <input name="day" id="day" type="text" placeholder="Add Date" [(ngModel)]="day"/>
+  </div>
+  <div>
+    <label>Set Reminder</label>
+    <input name="reminder" id="reminder" type="checkbox" [(ngModel)]="reminder"/>
+  </div>
+  <input type="submit" value="Edit Task"/>
+</form>

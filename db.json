@@ -2,27 +2,27 @@
   "tasks": [
     {
       "id": 1,
-      "text": "1st task",
-      "day": "1st May",
+      "text": "1st task1",
+      "day": "1st May1",
       "reminder": true
     },
     {
       "id": 2,
       "text": "2nd task",
       "day": "2nd May",
-      "reminder": true
+      "reminder": false
     },
     {
       "id": 3,
-      "text": "3rd task",
-      "day": "3rd May",
-      "reminder": true
+      "text": "3rd task1",
+      "day": "3rd Day2",
+      "reminder": ""
     },
     {
       "text": "test push",
       "day": "test day",
-      "reminder": false,
-      "id": 5
+      "reminder": true,
+      "id": 4
     }
   ]
 }

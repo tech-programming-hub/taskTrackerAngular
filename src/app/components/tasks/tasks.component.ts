@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { EditTaskComponent } from '../edit-task/edit-task.component';
 import { Task } from '../../model/Task';
 import { TaskService } from '../../services/task.service';
 import { TASKS } from '../../serverResponses/mockTasks'
+import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -11,9 +13,22 @@ import { TASKS } from '../../serverResponses/mockTasks'
 })
 export class TasksComponent implements OnInit {
   tasks: Task[] = [];
+  isEdit: boolean = false;
 
-  constructor(private taskService: TaskService) {
+  @ViewChild(EditTaskComponent) taskEditForm!: EditTaskComponent;
 
+  constructor(private taskService: TaskService) {}
+
+  public editTask(task: Task) {
+    this.taskEditForm.setValues(task);
+  }
+
+  public updateTask(task: Task) {
+    this.taskService.updateTask(task).subscribe(
+      (task) => {
+        this.tasks = this.tasks.map((t) => (t.id === task.id ? task : t))
+      }
+    );
   }
 
   public addTask(task: Task) {

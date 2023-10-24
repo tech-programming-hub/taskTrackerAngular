@@ -15,17 +15,13 @@ export class HeaderComponent {
   title: string = 'TaskTracker';
 
   constructor (private uiService: UiService, private router: Router) {
-  console.log("1. In add task constructor Header Component:  "+ this.showAddTask);
     this.uiService.onToggleAddTask().subscribe(
       (value) => (this.showAddTask = value)
     );
-    console.log("2. In add task constructor Header Component:  "+ this.showAddTask);
   }
 
   public addTask() {
-    console.log("1. In add task method Header Component:  "+ this.showAddTask);
     this.uiService.toggleAddTask();
-    console.log("2. In add task method Header Component:  "+ this.showAddTask);
   }
 
   public hasRoute(route: string) {

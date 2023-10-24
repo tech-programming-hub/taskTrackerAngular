@@ -14,6 +14,7 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { EditTaskComponent } from './components/edit-task/edit-task.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './components/footer/footer.component';
     TasksComponent,
     TaskItemComponent,
     AboutComponent,
-    FooterComponent
+    FooterComponent,
+    EditTaskComponent
   ],
   imports: [
     BrowserModule,
