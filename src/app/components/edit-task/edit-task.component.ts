@@ -49,7 +49,6 @@ export class EditTaskComponent {
     this.day = '';
     this.reminder = false;
 
-    //this.showEditTask = !this.showEditTask;
     this.uiService.toggleEditTask();
   }
 }
